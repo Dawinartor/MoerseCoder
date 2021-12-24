@@ -3,32 +3,32 @@ package MoerseCode;
 public class Alphabet {
 
     // erstelle von jedem Buchstaben eine Klasse
-    Letter the_A = new Letter(".-", 'A');
-    Letter the_B = new Letter("-...", 'B');
-    Letter the_C = new Letter("-.-.", 'C');
-    Letter the_D = new Letter("-..", 'D');
-    Letter the_E = new Letter(".", 'E');
-    Letter the_F = new Letter("..-.", 'F');
-    Letter the_G = new Letter("--.", 'G');
-    Letter the_H = new Letter("....", 'H');
-    Letter the_I = new Letter("..", 'I');
-    Letter the_J = new Letter(".---", 'J');
-    Letter the_K = new Letter("-.-", 'K');
-    Letter the_L = new Letter(".-..", 'L');
-    Letter the_M = new Letter("--", 'M');
-    Letter the_N = new Letter("-.", 'N');
-    Letter the_O = new Letter("---", 'O');
-    Letter the_P = new Letter(".--.", 'P');
-    Letter the_Q = new Letter("--.-", 'Q');
-    Letter the_R = new Letter(".-.", 'R');
-    Letter the_S = new Letter("...", 'S');
-    Letter the_T = new Letter("-", 'T');
-    Letter the_U = new Letter("..-", 'U');
-    Letter the_V = new Letter("...-", 'V');
-    Letter the_W = new Letter(".--", 'W');
-    Letter the_X = new Letter("-..-", 'X');
-    Letter the_Y = new Letter("-.--", 'Y');
-    Letter the_Z = new Letter("--..", 'Z');
+    Letter the_A = new Letter(".-", "A");
+    Letter the_B = new Letter("-...", "B");
+    Letter the_C = new Letter("-.-.", "C");
+    Letter the_D = new Letter("-..", "D");
+    Letter the_E = new Letter(".", "E");
+    Letter the_F = new Letter("..-.", "F");
+    Letter the_G = new Letter("--.", "G");
+    Letter the_H = new Letter("....", "H");
+    Letter the_I = new Letter("..", "I");
+    Letter the_J = new Letter(".---", "J");
+    Letter the_K = new Letter("-.-", "K");
+    Letter the_L = new Letter(".-..", "L");
+    Letter the_M = new Letter("--", "M");
+    Letter the_N = new Letter("-.", "N");
+    Letter the_O = new Letter("---", "O");
+    Letter the_P = new Letter(".--.", "P");
+    Letter the_Q = new Letter("--.-", "Q");
+    Letter the_R = new Letter(".-.", "R");
+    Letter the_S = new Letter("...", "S");
+    Letter the_T = new Letter("-", "T");
+    Letter the_U = new Letter("..-", "U");
+    Letter the_V = new Letter("...-", "V");
+    Letter the_W = new Letter(".--", "W");
+    Letter the_X = new Letter("-..-", "X");
+    Letter the_Y = new Letter("-.--", "Y");
+    Letter the_Z = new Letter("--..", "Z");
     // erstelle Array buchstabenliste
     Letter letterList[] = {
         the_A, the_B, the_C, the_D, the_E,
@@ -39,9 +39,11 @@ public class Alphabet {
         the_Z
     };
 
+
     public String translateToMorse(String word) {
 
         String morsecodeResult = "";
+        System.out.println(word.length());
 
         for (int i = 0 ; i < word.length() ; i++) {
             for (int j = 0; j < 26; j++) {
@@ -50,7 +52,7 @@ public class Alphabet {
                     //Der gefunde Buchstabe wird als Moersecode dem String angehaengt
                     morsecodeResult.concat(letterList[j].getMauserCode() + " "); // Leertaste um Buchstaben zu trennen
                 } else {
-                    System.out.println("Huston, wir haben ein Problem");
+                    //System.out.println("Huston, wir haben ein Problem");
                 }
             }
         }
@@ -59,19 +61,17 @@ public class Alphabet {
 
     public String translateToNormal(String morseWord) {
 
-        String translationToNormal;
+        String letterResult = "";
 
-        for(int i = 0 ; i < morseWord.length() ; i++) {
+        for(int i = 0; i < morseWord.length(); i++) {
             for(int j = 0 ; j < 26 ; j++) {
                 //Wann entspricht der Buchstabe 
-                if(morseWord.equals(letterList[j])) {
+                //if(morseWord.charAt(i) == letterList[j].getMauserCode()) {
                     //Der Entsprechende Buchstabe des Morsecodes wird in den String gepushed.
-                    translationToNormal.push(letterList[j].name);
+                    letterResult.concat(letterList[j].getName() + " ");
                 }
             }
-        }
-
-        return translationToNormal;
+        return letterResult;
     }
     
 }

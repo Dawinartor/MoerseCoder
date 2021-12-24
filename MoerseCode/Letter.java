@@ -1,13 +1,13 @@
 package MoerseCode;
 public class Letter {
 
-    public Letter(String mauserCode, char name){
+    public Letter(String mauserCode, String name){
         this.mauserCode = mauserCode;
         this.name = name;
     }
 
     private String mauserCode;
-    private char name;
+    private String name;
 
     @Override
     public String toString(){
@@ -19,7 +19,7 @@ public class Letter {
         return this.mauserCode;
     }
 
-    public char getName() {
+    public String getName() {
         return this.name;
     }
 
