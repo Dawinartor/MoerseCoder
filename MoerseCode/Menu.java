@@ -1,7 +1,5 @@
 package MoerseCode;
 import java.util.Scanner;
-import javax.sound.sampled.SourceDataLine;
-import MoerseCode.Alphabet;
 
 public class Menu {
     private String input;

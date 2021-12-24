@@ -43,16 +43,15 @@ public class Alphabet {
     public String translateToMorse(String word) {
 
         String morsecodeResult = "";
-        System.out.println(word.length());
 
         for (int i = 0 ; i < word.length() ; i++) {
             for (int j = 0; j < 26; j++) {
                 //vergleiche spezifische stelle des Wortes mit Alphabet
-                if( word.charAt(i) == letterList[j].getName() ) {
+                if( letterList[j].getName().equals( Character.toString( word.charAt(i) ) ) ) {
                     //Der gefunde Buchstabe wird als Moersecode dem String angehaengt
-                    morsecodeResult.concat(letterList[j].getMauserCode() + " "); // Leertaste um Buchstaben zu trennen
+                    morsecodeResult = morsecodeResult + letterList[j].getMauserCode() + " "; // Leertaste um Buchstaben zu trennen
                 } else {
-                    //System.out.println("Huston, wir haben ein Problem");
+                    System.err.println("Huston, wir haben ein Problem");
                 }
             }
         }
