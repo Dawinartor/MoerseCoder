@@ -41,18 +41,20 @@ public class Alphabet {
 
     public String translateToMorse(String word) {
 
-        String translationToMorse;
+        String morsecodeResult = "";
 
         for (int i = 0 ; i < word.length() ; i++) {
-            for (int j = 0 ; j < 26 ; j++) {
-                //Überprüfung wann der Buchstabe der letterList entspricht.
-                if(word.equals(letterList[j])) {
-                    //Der entsprechende Morsecode des Buchstaben wird in den String gespeichert.
-                    translationToMorse.append(letterList[j].getMauserCode());
+            for (int j = 0; j < 26; j++) {
+                //vergleiche spezifische stelle des Wortes mit Alphabet
+                if( word.charAt(i) == letterList[j].getName() ) {
+                    //Der gefunde Buchstabe wird als Moersecode dem String angehaengt
+                    morsecodeResult.concat(letterList[j].getMauserCode() + " "); // Leertaste um Buchstaben zu trennen
+                } else {
+                    System.out.println("Huston, wir haben ein Problem");
                 }
             }
         }
-        return translationToMorse;
+        return morsecodeResult;
     }
 
     public String translateToNormal(String morseWord) {
