@@ -1,3 +1,4 @@
+package Letters;
 public abstract class Letter {
 
     public Letter(String mauserCode, char name){
