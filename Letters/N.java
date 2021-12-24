@@ -1,5 +1,9 @@
 package Letters;
 
-public class N {
+public class N extends Letter {
+
+    public N(String mauserCode, char name) {
+        super(mauserCode, name);
+    }
     
 }
