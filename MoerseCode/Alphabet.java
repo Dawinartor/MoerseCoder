@@ -1,5 +1,4 @@
 package MoerseCode;
-import Letters.*;
 
 public class Alphabet {
 
