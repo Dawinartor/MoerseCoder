@@ -6,6 +6,7 @@ import MoerseCode.Alphabet;
 public class Menu {
     private String input;
     private int decision;
+    String translation;
     Alphabet ab = new Alphabet();
 
     public void welcome(){
@@ -18,7 +19,6 @@ public class Menu {
 
     //Je nachdem welche Entscheidung vom User getroffen wird, wird der String übersetzt.
     public void elaborate(){
-        String translation;
 
         switch(decision){
             case 1: 
@@ -44,7 +44,7 @@ public class Menu {
     }
 
     public void output(){
-        System.out.println("-> ");
+        System.out.println("-> " + translation);
     }
 
     
