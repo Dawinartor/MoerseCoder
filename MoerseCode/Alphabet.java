@@ -49,7 +49,7 @@ public class Alphabet {
                 //Überprüfung wann der Buchstabe der letterList entspricht.
                 if(word.equals(letterList[j])) {
                     //Der entsprechende Morsecode des Buchstaben wird in den String gespeichert.
-                    translationToMorse.push(letterList[j].morseCode);
+                    translationToMorse.append(letterList[j].getMauserCode());
                 }
             }
         }
