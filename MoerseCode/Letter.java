@@ -1,5 +1,5 @@
-package Letters;
-public abstract class Letter {
+package MoerseCode;
+public class Letter {
 
     public Letter(String mauserCode, char name){
         this.mauserCode = mauserCode;
