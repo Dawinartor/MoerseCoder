@@ -4,32 +4,32 @@ import Letters.*;
 public class Alphabet {
 
     // erstelle von jedem Buchstaben eine Klasse
-    Letter the_A = new A(".-", 'A');
-    Letter the_B = new B("-...", 'B');
-    Letter the_C = new C("-.-.", 'C');
-    Letter the_D = new D("-..", 'D');
-    Letter the_E = new E(".", 'E');
-    Letter the_F = new F("..-.", 'F');
-    Letter the_G = new G("--.", 'G');
-    Letter the_H = new H("....", 'H');
-    Letter the_I = new I("..", 'I');
-    Letter the_J = new J(".---", 'J');
-    Letter the_K = new K("-.-", 'K');
-    Letter the_L = new L(".-..", 'L');
-    Letter the_M = new M("--", 'M');
-    Letter the_N = new N("-.", 'N');
-    Letter the_O = new O("---", 'O');
-    Letter the_P = new P(".--.", 'P');
-    Letter the_Q = new Q("--.-", 'Q');
-    Letter the_R = new R(".-.", 'R');
-    Letter the_S = new S("...", 'S');
-    Letter the_T = new T("-", 'T');
-    Letter the_U = new U("..-", 'U');
-    Letter the_V = new V("...-", 'V');
-    Letter the_W = new W(".--", 'W');
-    Letter the_X = new X("-..-", 'X');
-    Letter the_Y = new Y("-.--", 'Y');
-    Letter the_Z = new Z("--..", 'Z');
+    Letter the_A = new Letter(".-", 'A');
+    Letter the_B = new Letter("-...", 'B');
+    Letter the_C = new Letter("-.-.", 'C');
+    Letter the_D = new Letter("-..", 'D');
+    Letter the_E = new Letter(".", 'E');
+    Letter the_F = new Letter("..-.", 'F');
+    Letter the_G = new Letter("--.", 'G');
+    Letter the_H = new Letter("....", 'H');
+    Letter the_I = new Letter("..", 'I');
+    Letter the_J = new Letter(".---", 'J');
+    Letter the_K = new Letter("-.-", 'K');
+    Letter the_L = new Letter(".-..", 'L');
+    Letter the_M = new Letter("--", 'M');
+    Letter the_N = new Letter("-.", 'N');
+    Letter the_O = new Letter("---", 'O');
+    Letter the_P = new Letter(".--.", 'P');
+    Letter the_Q = new Letter("--.-", 'Q');
+    Letter the_R = new Letter(".-.", 'R');
+    Letter the_S = new Letter("...", 'S');
+    Letter the_T = new Letter("-", 'T');
+    Letter the_U = new Letter("..-", 'U');
+    Letter the_V = new Letter("...-", 'V');
+    Letter the_W = new Letter(".--", 'W');
+    Letter the_X = new Letter("-..-", 'X');
+    Letter the_Y = new Letter("-.--", 'Y');
+    Letter the_Z = new Letter("--..", 'Z');
     // erstelle Array buchstabenliste
     Letter letterList[] = {
         the_A, the_B, the_C, the_D, the_E,
