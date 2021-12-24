@@ -1,5 +1,10 @@
 public class Alphabet {
 
+    // Erstelle jeden Buchstaben als Objekt
+    
+
+    String[] letterList;
+
     public static translateToMorse(String word) {
 
         for (int i = 0 ; i < word.length() ; i++) {
