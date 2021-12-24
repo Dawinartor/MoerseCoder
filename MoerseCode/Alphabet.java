@@ -54,7 +54,6 @@ public class Alphabet {
                 }
             }
         }
-
         return translationToMorse;
     }
 
